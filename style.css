@@ -1,59 +1,66 @@
-:root{
+:root {
+  --white: #f7f9fb;
+  --whidt: #f2faff;
+  --blue: #151fff;
+  --blue-black: #000124;
+  --celeste: #66bfff;
+  --celeste-black: #001524;
+  --red: #ff8280;
+  --gray: #c4c5c7;
 
-    --white: #F7F9FB;
-    --whidt: #F2FAFF;
-    --blue: #000124;
-    --celeste: ;
-    --gray:
+  /*fuuentes*/
+  --font-small-size: 1rem;
+  --font-small-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-
-
 
 * {
   margin: 0;
   box-sizing: border-box;
   padding: 0;
+  text-decoration: none;
 }
 
-header{
-    height: 3rem;
-    
-}
-img {
-  width: 100px;
-  border: solid 0.5px #000000;
-  padding: 10px;
+.header-box {
+  height: 52px;
+  width: 100%;
+  background-color: var(--whidt);
+  padding: 0px 48px;
+  position:fixed;
 }
 .wrapper {
+  height: 100%;
   display: flex;
+  align-items: center;
+}
+
+.box-header-content {
   justify-content: space-between;
+  align-items: center;
 }
-.box {
-  display: flex;
+.box-header-content img{
+  height: 2.8rem;
 }
-span a {
-  color: rgba(20, 20, 20, 0.933);
-  text-decoration: none;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 500;
+
+
+
+.pagues-box {
+  width: 670px;
+  justify-content: space-around;
+  font-family: var(--font-small-family);
+  font-size: var(--font-small-size);
+  font-weight: bolder;
 }
+
 .button {
-  border: solid 0.5px #1327e0;
-  border-radius: 5px;
+  border: solid 0.15em;
+  padding: 0.5em;
+  border-radius: 0.5em;
 }
-.button a {
-  color: #1327e0;
+
+.gohst-blue {
+  background: none;
+  color: var(--blue);
 }
-.button a:hover {
-  color: #ffffff;
-}
-.button :hover {
-  border: solid 0.5px #ffffff;
-  background-color: #1327e0;
-  border-radius: 5px;
-  padding: 10px;
-}
-span :hover {
-  padding: 5px;
-}
+
+
