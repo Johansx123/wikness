@@ -33,6 +33,9 @@
 main{
   background-color: var(--white);
 }
+
+/* Encabezado */
+
 .header-box {
   height: 52px;
   width: 100%;
@@ -137,6 +140,10 @@ main{
   
 }
 
+.content-banner img{  /* Titulo con linear como imagen*/
+  width: 600px;
+}
+
 /* Servicios */
 
 .servicios{
@@ -172,6 +179,9 @@ main{
   color: var(--white);
   padding-top: 60px;
   display: inline;
-  overflow:hidden;
-  
+  overflow:hidden;  
 }
+
+/* Nosotros */
+
+
