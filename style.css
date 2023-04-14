@@ -1,6 +1,5 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400&family=Roboto:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400&family=Roboto:wght@400;500&display=swap");
 :root {
   --white: #f7f9fb;
   --whidt: #f2faff;
@@ -10,17 +9,28 @@
   --celeste-black: #001524;
   --red: #ff8280;
   --gray: #c4c5c7;
-  
+
+  --blue-black-transparency:0, 1, 36;
+
   /*fuentes*/
   --font-size: 1rem;
   --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-  Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  --subtitle:40px;
-  
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --subtitle: 40px;
+
   /* Margenes */
   --margin-body: 100px;
 
+  /* Capas */
+  --z-max-front:20;
+  --z-fixed: 15;
+  --z-content:10;
+  --z-shadow:5;
+  --z-background: -5;
 
+  /*transitions*/
+  --button-transition:0.5s;
+  
 }
 
 * {
@@ -30,7 +40,7 @@
   text-decoration: none;
 }
 
-main{
+main {
   background-color: var(--white);
 }
 
@@ -41,7 +51,7 @@ main{
   width: 100%;
   background-color: var(--whidt);
   padding: 0px var(--margin-body);
-  position:fixed;
+  position: fixed;
   box-shadow: 0px 0px 3px 1px var(--gray);
 }
 .wrapper {
@@ -54,7 +64,7 @@ main{
   justify-content: space-between;
   align-items: center;
 }
-.box-header-content img{
+.box-header-content img {
   height: 2.8rem;
 }
 
@@ -67,17 +77,16 @@ main{
 }
 
 .page-box :hover {
-  transition: 0.2S;
+  transition: 0.2s;
 }
-.page-item{
-  padding:  15px;
- 
+.page-item {
+  padding: 15px;
+
   transition: 0.2s;
 }
 .page-item:hover {
-  
   transition: 0.2s;
-  background-color:#a4a4a43a;
+  background-color: #a4a4a43a;
 }
 
 /*Botones*/
@@ -90,70 +99,80 @@ main{
 .ghost-blue {
   background: none;
   color: var(--blue);
-  transition: 0.2s;
+  transition:var(--button-transition);
 }
-.ghost-blue:hover{
+.ghost-blue:hover {
   background-color: var(--blue);
   color: var(--whidt);
   border: solid 0.15em var(--blue);
-  transition: 0.2s;
+  transition:var(--button-transition);
 }
 
-.solid-blue{
-  background-color:var(--blue);
+.solid-blue {
+  background-color: var(--blue);
   color: var(--whidt);
   border-color: var(--blue);
   align-self: baseline;
   margin-top: 26px;
   transition: 0.2s;
 }
-.solid-blue:hover{
+.solid-blue:hover {
   background-color: #1119b8;
   border-color: #1119b8;
   transition: 0.2s;
 }
-
-
+.solid-blue-black{
+  background-color: var(--blue-black);
+  color: var(--white);
+  border: solid 0.05em;
+  transition: var(--button-transition);
+}
+.solid-blue-black:hover{
+  background-color: var(--white);
+  color: var(--blue-black);
+  border: solid 0.1em;
+  transition: var(--button-transition);
+}
 /*Banner*/
 
-.banner{
+.banner {
   width: 100%;
   height: 700px;
-  background-image:url(/images/Banner.png);
+  background-image: url(/images/Banner.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 130rem;
-  padding-top: 100px; 
+  padding-top: 100px;
   padding-left: var(--margin-body);
 }
-.content-banner{
+.content-banner {
   width: 560px;
   height: 85%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  font-family:var(--font-family);
-  font-size: var(--subtitle) ;
-  text-align:left;
+  font-family: var(--font-family);
+  font-size: var(--subtitle);
+  text-align: left;
   color: var(--white);
-  
 }
 
-.content-banner img{  /* Titulo con linear como imagen*/
+.content-banner img {
+  /* Titulo con linear como imagen*/
   width: 600px;
 }
 
 /* Servicios */
 
-.servicios{
+.servicios {
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 340px;
 }
 
-.servicios-item{
+.servicios-item {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -172,37 +191,48 @@ main{
   transition: 0.2s;
 }
 
-.servicios-item:hover{
+.servicios-item:hover {
   height: 250px;
   width: 262px;
   transition: 0.2s;
   color: var(--white);
   padding-top: 60px;
   display: inline;
-  overflow:hidden;  
+  overflow: hidden;
 }
 
 /* Nosotros */
 
-
-.nosotros{
+.nosotros {
+  position: relative;
   display: flex;
   padding: 0 20%;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   height: 500px;
-  background-image:url(/images/nosotros.png); 
+  background: url(/images/nosotros.png);
   background-position: center;
   background-size: cover;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   text-align: center;
 }
 
-.title-nosotros{
-    font-size: var(--subtitle);
+.title-nosotros,
+.paragraf-nosotros {
+  font-size: var(--subtitle);
+  color: var(--white);
+  z-index: var(--z-content);
+}
+.shadow-nosotros{
+  position: absolute;
+  background-color: rgba(0,0,0,30%);
+  height: 500px;
+  width: 100%;
+  z-index: var(--z-shadow);
 }
 
-.paragraf-nosotros{
-  font-size: var(--subtitle);
+.nosotros>.button{
+  z-index: var(--z-content);
+  font-size: 2rem;
 }
