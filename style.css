@@ -45,6 +45,15 @@ main {
   background-color: var(--white);
 }
 
+.title,
+.paragraf {
+  font-size: var(--subtitle);
+  color: var(--white);
+  z-index: var(--z-content);
+  font-family: var(--font-family);
+}
+
+
 /* Encabezado */
 
 .header-box {
@@ -219,13 +228,6 @@ main {
   font-family: "Josefin Sans", sans-serif;
   text-align: center;
 }
-
-.title,
-.paragraf-nosotros {
-  font-size: var(--subtitle);
-  color: var(--white);
-  z-index: var(--z-content);
-}
 .shadow-nosotros{
   position: absolute;
   background-color: rgba(0,0,0,30%);
@@ -244,12 +246,12 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+  margin: 7% 0;
 }
 .wrapper-jobs>.title{
   color: var(--blue-black);
   font-family: var(--font-family);
-  margin: 5%;
+  margin-bottom: 7%;
 }
 .slider{
  display: flex;
@@ -286,4 +288,27 @@ main {
   opacity: 100%;
   transition: opacity 0.5s;
 }
+.wrapper-footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--blue-black);
+  color: var(--white);
+  text-align: center;
+  gap: 10rem;
+  padding: 10% 0 2% 0;
+}
+
+.wrapper-footer .paragraf{
+  width: 42%;
+}
+.bottom-footer{
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  font-family: var(--font-family);
+}
+
+
 
