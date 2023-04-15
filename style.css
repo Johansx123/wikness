@@ -144,7 +144,7 @@ main {
 .banner {
   width: 100%;
   height: 700px;
-  background-image: url(./images/Banner.png);
+  background-image:url(./images/Banner.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 130rem;
@@ -223,7 +223,7 @@ main {
   align-items: center;
   justify-content: space-around;
   height: 500px;
-  background: url(./images/nosotros.png);
+  background-image:url(./images/nosotros.png);
   background-position: center;
   background-size: cover;
   font-family: "Josefin Sans", sans-serif;
