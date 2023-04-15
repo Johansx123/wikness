@@ -249,6 +249,9 @@ main {
   align-items: center;
   margin: 7% 0;
 }
+.wrapper-jobs a {
+  cursor: pointer;
+}
 .wrapper-jobs > .title {
   color: var(--blue-black);
   font-family: var(--font-family);
