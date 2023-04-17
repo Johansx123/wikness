@@ -109,6 +109,20 @@ main {
   font-size: 2rem;
   text-align: center;
   border-radius: 50%;
+  border: solid 1px var(--celeste);
+  top: 60%;
+  cursor: pointer;
+}
+.btn:hover{
+  color: var(--blue);
+  border:solid 1px  var(--blue);
+}
+.prev{
+  left: .2em;
+  
+}
+.next{
+  right: .2em;
 }
 
 
@@ -258,6 +272,7 @@ main {
 
 /* Trabajos */
 .wrapper-jobs {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -295,8 +310,9 @@ main {
   position: absolute;
   display: flex;
   align-items: center;
-  width: 100vh;
+  width: 100%;
   margin: auto;
+  z-index: 60;
 }
 .info-jobs {
   opacity: 0;
