@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400&family=Roboto:wght@400;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght400;500;600&display=swap');
 :root {
   --white: #f7f9fb;
   --whidt: #f2faff;
@@ -98,33 +99,6 @@ main {
   background-color: var(--blue);
   transition: background var(--button-transition);
 }
-.btn{
-  position: absolute;
-  background-color: var(--celeste-black);
-  color: var(--celeste);
-  width: 50px;
-  height: 50px;
-  z-index: var(--z-content);
-  font-family: var(--font-family);
-  font-size: 2rem;
-  text-align: center;
-  border-radius: 50%;
-  border: solid 1px var(--celeste);
-  top: 60%;
-  cursor: pointer;
-}
-.btn:hover{
-  color: var(--blue);
-  border:solid 1px  var(--blue);
-}
-.prev{
-  left: .2em;
-  
-}
-.next{
-  right: .2em;
-}
-
 
 /* Encabezado */
 
@@ -172,7 +146,7 @@ main {
 .banner {
   width: 100%;
   height: 700px;
-  background-image:url(./images/Banner.png);
+  background-image: url(./images/Banner.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 130rem;
@@ -251,7 +225,7 @@ main {
   align-items: center;
   justify-content: space-around;
   height: 500px;
-  background-image:url(./images/nosotros.png);
+  background-image: url(./images/nosotros.png);
   background-position: center;
   background-size: cover;
   font-family: "Josefin Sans", sans-serif;
@@ -276,46 +250,85 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+  justify-content: center;
   margin: 7% auto;
-  
-  overflow: hidden;
-  width: 80%;
+  padding: 0 35px; 
 }
 .wrapper-jobs a {
   cursor: pointer;
-  width: 276px;
 }
 .wrapper-jobs > .title {
   color: var(--blue-black);
   font-family: var(--font-family);
   margin-bottom: 7%;
 }
-.slider {
-  display: flex;
-  gap: 5rem;
-  padding: 0 0 2.5% 0;
+.wrapper-slider {
+  max-width: 1200px;
   position: relative;
 }
-.slider a {
+.wrapper-slider i{
+  top:50%;
+  cursor: pointer;
+  position: absolute;
+  height: 46px;
+  width: 46px;
+  font-size: 1.2rem;
+  background: #fff;
+  text-align:center;
+  line-height: 46PX;
+  border-radius: 50%;
+  border: solid 1px var(--blue-black);
+  transform: translateY(-50%);
+  z-index: var(--z-content);
+}
+.wrapper-slider i:first-child{
+  left: -23px; 
+}
+.wrapper-slider i:last-child{
+  right: -23px; 
+  
+}
+.wrapper-slider .carousel{
+  white-space:nowrap;
+  cursor: pointer;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+.carousel.dragging{
+  cursor: grab;
+  scroll-behavior: auto;
+}
+.carousel.dragging a img{
+  pointer-events: none;
+}
+.carousel .item-slider{
+  object-fit: cover;
+  margin-left: 14px;
+  height: auto;
+  width: calc(100% / 4);
   position: relative;
   border-radius: 0.5em;
   box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.671);
-  object-fit: cover;
   overflow: hidden;
-  width: 276px;
-  height: 178px;
+  
 }
-.btn-slider{
-  position: absolute;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  margin: auto;
-  z-index: 60;
+.carousel a:first-child{
+  margin-left: 0px;
 }
+
+@media screen and (max-width: 900px) {
+  .carousel .item-slider{
+      width: calc(100% / 2) ;
+  }
+}
+@media screen and (max-width: 550px) {
+  .carousel .item-slider img{
+      width: 100%;
+  }
+}
+
 .info-jobs {
-  opacity: 0;
+  /* opacity: 0; */
   padding: 10%;
   position: absolute;
   display: flex;
@@ -324,7 +337,7 @@ main {
   justify-content: space-around;
   text-align: center;
   height: 100%;
-  width: 276px;
+  width: 100%;
   background-color: rgba(var(--blue-transparency), 75%);
   color: var(--white);
   font-family: var(--font-family);
@@ -355,4 +368,3 @@ main {
   gap: 2em;
   font-family: var(--font-family);
 }
-
