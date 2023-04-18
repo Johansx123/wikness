@@ -1,5 +1,5 @@
 
- let root = document.getElementById("slider"),
+ let root = document.getElementById("carousel"),
  
  base = [];
 // img.src = "images/nuestros jobs.jpg"
@@ -56,42 +56,42 @@ const pet = () => {
 
 
   
-  let boxSlider = document.getElementById('wrapper-jobs')
-  const slider = boxSlider.querySelector("#slider");
-  let slide = boxSlider.querySelectorAll(".item-slider");
-  let slideLast = slide[slide.length -1,slide.length - 2];
+  // let boxSlider = document.getElementById('wrapper-jobs')
+  // const slider = boxSlider.querySelector("#slider");
+  // let slide = boxSlider.querySelectorAll(".item-slider");
+  // let slideLast = slide[slide.length -1,slide.length - 2];
   
-  console.log(slideLast)
-  const prevBtn = boxSlider.querySelector ("#btn-prev");
-  const nextBtn = boxSlider.querySelector ("#btn-next");
+  // console.log(slideLast)
+  // const prevBtn = boxSlider.querySelector ("#btn-prev");
+  // const nextBtn = boxSlider.querySelector ("#btn-next");
   
-  slider.insertAdjacentElement( "afterbegin", slideLast)
+  // slider.insertAdjacentElement( "afterbegin", slideLast)
   
-  const moveNext = () =>{
-    let slideFirst = boxSlider.querySelectorAll(".item-slider")[0];
-    slider.style.marginLeft = "-50%"
-    slider.style.transition = "margin 0.5s"
-    setTimeout(()=>{
-      slider.style.transition = "none"
-      slider.insertAdjacentElement("beforeend", slideFirst)
-      slider.style.marginLeft = "-2%"
+  // const moveNext = () =>{
+  //   let slideFirst = boxSlider.querySelectorAll(".item-slider")[0];
+  //   slider.style.marginLeft = "-50%"
+  //   slider.style.transition = "margin 0.5s"
+  //   setTimeout(()=>{
+  //     slider.style.transition = "none"
+  //     slider.insertAdjacentElement("beforeend", slideFirst)
+  //     slider.style.marginLeft = "-2%"
       
       
   
-    }, 400);
-  }
-  const movePrev = () =>{
-    let slide = boxSlider.querySelectorAll(".item-slider");
-    let slideLast = slide[slide.length - 1, slide.length-2];
-    slider.style.marginLeft = "0%"
-    slider.style.transition = "margin 0.5s"
-    setTimeout(()=>{
-      slider.style.transition = "none"
-      slider.insertAdjacentElement("afterbegin", slideLast)
-      slider.style.marginLeft= "0"
-    }, 500);
-  }
+  //   }, 400);
+  // }
+  // const movePrev = () =>{
+  //   let slide = boxSlider.querySelectorAll(".item-slider");
+  //   let slideLast = slide[slide.length - 1, slide.length-2];
+  //   slider.style.marginLeft = "0%"
+  //   slider.style.transition = "margin 0.5s"
+  //   setTimeout(()=>{
+  //     slider.style.transition = "none"
+  //     slider.insertAdjacentElement("afterbegin", slideLast)
+  //     slider.style.marginLeft= "0"
+  //   }, 500);
+  // }
   
-  nextBtn.addEventListener('click', ()=>{moveNext()})
-  prevBtn.addEventListener('click', ()=>{movePrev()})
+  // nextBtn.addEventListener('click', ()=>{moveNext()})
+  // prevBtn.addEventListener('click', ()=>{movePrev()})
 
