@@ -98,6 +98,34 @@ main {
   background-color: var(--blue);
   transition: background var(--button-transition);
 }
+.btn{
+  position: absolute;
+  background-color: var(--celeste-black);
+  color: var(--celeste);
+  width: 50px;
+  height: 50px;
+  z-index: var(--z-content);
+  font-family: var(--font-family);
+  font-size: 2rem;
+  text-align: center;
+  border-radius: 50%;
+  border: solid 1px var(--celeste);
+  top: 60%;
+  cursor: pointer;
+}
+.btn:hover{
+  color: var(--blue);
+  border:solid 1px  var(--blue);
+}
+.prev{
+  left: .2em;
+  
+}
+.next{
+  right: .2em;
+}
+
+
 /* Encabezado */
 
 .header-box {
@@ -144,7 +172,7 @@ main {
 .banner {
   width: 100%;
   height: 700px;
-  background-image: url(/images/Banner.png);
+  background-image:url(./images/Banner.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 130rem;
@@ -223,7 +251,7 @@ main {
   align-items: center;
   justify-content: space-around;
   height: 500px;
-  background: url(/images/nosotros.png);
+  background-image:url(./images/nosotros.png);
   background-position: center;
   background-size: cover;
   font-family: "Josefin Sans", sans-serif;
@@ -244,10 +272,19 @@ main {
 
 /* Trabajos */
 .wrapper-jobs {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 7% 0;
+  
+  margin: 7% auto;
+  
+  overflow: hidden;
+  width: 80%;
+}
+.wrapper-jobs a {
+  cursor: pointer;
+  width: 276px;
 }
 .wrapper-jobs > .title {
   color: var(--blue-black);
@@ -256,8 +293,9 @@ main {
 }
 .slider {
   display: flex;
-  width: 100%;
-  justify-content: space-around;
+  gap: 5rem;
+  padding: 0 0 2.5% 0;
+  position: relative;
 }
 .slider a {
   position: relative;
@@ -265,10 +303,16 @@ main {
   box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.671);
   object-fit: cover;
   overflow: hidden;
+  width: 276px;
   height: 178px;
 }
-.slider img {
+.btn-slider{
+  position: absolute;
+  display: flex;
+  align-items: center;
   width: 100%;
+  margin: auto;
+  z-index: 60;
 }
 .info-jobs {
   opacity: 0;
@@ -280,6 +324,7 @@ main {
   justify-content: space-around;
   text-align: center;
   height: 100%;
+  width: 276px;
   background-color: rgba(var(--blue-transparency), 75%);
   color: var(--white);
   font-family: var(--font-family);
@@ -310,3 +355,4 @@ main {
   gap: 2em;
   font-family: var(--font-family);
 }
+
