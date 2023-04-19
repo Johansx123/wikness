@@ -1,8 +1,10 @@
 const carousel = document.querySelector(".carousel"),
   firstImg = carousel.querySelectorAll(".item-slider")[0],
-  arrowIcons = document.querySelectorAll(".wrapper-slider i");
+  images = carousel.getElementsByClassName("item-slider"),
+  arrowIcons = document.querySelectorAll(".wrapper-slider i"),
+  wrapper = document.getElementById("wrapper-slider");
 
-let isDragStart = false,isDragging = false, prevPageX,prevScrollLeft,positionDiff;
+let isDragStart = false,isDragging = false, prevPageX,prevScrollLeft,positionDiff,widthWrapper;
 const showHideIcons = () => {
   let scrollWidth = carousel.scrollWidth - carousel.clientWidth;
   arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block";
@@ -52,6 +54,7 @@ const dragStop = () => {
   isDragging = false
   autoSlide();
 };
+
 carousel.addEventListener("mousedown", dragStart);
 carousel.addEventListener("touchstart", dragStart);
 
@@ -61,3 +64,10 @@ carousel.addEventListener("touchmove", dragging);
 carousel.addEventListener("mouseup", dragStop);
 carousel.addEventListener("mouseleave", dragStop);
 carousel.addEventListener("touchend", dragStop);
+const widthImg = () =>{
+
+}
+widthImg()
+wrapper.clientWidth = 20
+
+

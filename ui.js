@@ -13,10 +13,11 @@ let card = document.createElement("a"),
     paragraf = document.createElement("p")
 
     root.appendChild(card);
+      card.className = 'item-slider'
       card.appendChild(info);
       card.appendChild(img);
       info.appendChild(title);
-      info.appendChild(paragraf);
+      info.appendChild(paragraf); 
       img.src = data.img;
       title.innerText = data.title;
       paragraf.innerHTML = data.info;
