@@ -1,20 +1,20 @@
 
   const carousel = document.querySelector(".carousel"), firstImg = carousel.querySelectorAll(".item-slider")[0], images = carousel.getElementsByClassName("item-slider"), arrowIcons = document.querySelectorAll(".wrapper-slider i"), wrapper = document.getElementById("wrapper-slider");
 
-let isDragStart = false,isDragging = false, prevPageX,prevScrollLeft,positionDiff,widthWrapper;
-const showHideIcons = () => {
-  let scrollWidth = carousel.scrollWidth - carousel.clientWidth;
-  arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block";
-  arrowIcons[1].style.display =
-    carousel.scrollLeft == scrollWidth ? "none" : "block";
-};
-arrowIcons.forEach((icon) => {
-  icon.addEventListener("click", () => {
-    let firstImgWidth = firstImg.clientWidth + 14;
-    carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
-    setTimeout(() => showHideIcons(), 60);
+  let isDragStart = false, isDragging = false, prevPageX, prevScrollLeft, positionDiff, widthWrapper;
+  const showHideIcons = () => {
+    let scrollWidth = carousel.scrollWidth - carousel.clientWidth;
+    arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block";
+    arrowIcons[1].style.display =
+      carousel.scrollLeft == scrollWidth ? "none" : "block";
+  };
+  arrowIcons.forEach((icon) => {
+    icon.addEventListener("click", () => {
+      let firstImgWidth = firstImg.clientWidth;
+      carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
+      setTimeout(() => showHideIcons(), 60);
+    });
   });
-});
 
   const autoSlide = () => {
     if (carousel.scrollLeft == (carousel.scrollWidth - carousel.clientWidth))

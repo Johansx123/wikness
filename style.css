@@ -295,7 +295,8 @@ body .header-box {
 .wrapper-slider .carousel{
 overflow: hidden;
 display: grid;
-padding: 5% 1% ;
+grid-auto-columns:calc(100% / 4);
+padding: 5% 0 ;
 scroll-behavior: smooth;
 }
 .carousel.dragging{
@@ -307,29 +308,37 @@ scroll-behavior: smooth;
 }
 .carousel .item-slider{
   display: flex;
+  overflow: hidden;
   object-fit: cover;
+  justify-content: center;
+  align-items: center;
   margin-left: 14px;
   grid-row-start: 1;
   grid-row-end:2 ;
-  overflow: hidden;
+  height: auto;
   position: relative;
   border-radius: 0.5em;
-  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.671);
+  box-shadow: 0 0 0.2em rgba(0, 0, 0, 0.671);
 }
 .carousel .item-slider:first-child{
   margin-left: 0;
 }
 
+@media screen and (max-width: 1200px) {
+  .wrapper-slider .carousel{
+    grid-auto-columns:calc(100% / 3);
+  }
+}
 @media screen and (max-width: 900px) {
-  .carousel .item-slider{
-      width: calc(100% / 2) ;
+  .wrapper-slider .carousel{
+    grid-auto-columns:calc(100%/2);
   }
-} 
+}
 @media screen and (max-width: 550px) {
-  .carousel .item-slider img{
-      width: 100%;
+  .wrapper-slider .carousel{
+    grid-auto-columns:100%;
   }
-} 
+}
 
 .carousel .info-jobs {
   opacity: 0;
