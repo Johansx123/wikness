@@ -296,6 +296,7 @@ body .header-box {
 overflow: hidden;
 display: grid;
 grid-auto-columns:calc(100% / 4);
+grid-template-rows: 220px;
 padding: 5% 0 ;
 scroll-behavior: smooth;
 }
@@ -308,17 +309,18 @@ scroll-behavior: smooth;
 }
 .carousel .item-slider{
   display: flex;
-  overflow: hidden;
   object-fit: cover;
   justify-content: center;
-  align-items: center;
+  overflow: hidden;
   margin-left: 14px;
   grid-row-start: 1;
   grid-row-end:2 ;
-  height: auto;
   position: relative;
   border-radius: 0.5em;
   box-shadow: 0 0 0.2em rgba(0, 0, 0, 0.671);
+}
+.carousel .item-slider img{
+  width: 100%;
 }
 .carousel .item-slider:first-child{
   margin-left: 0;
