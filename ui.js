@@ -1,4 +1,4 @@
-import "./slider"
+
 let root = document.getElementById("carousel"),
  
  base = [];
@@ -95,4 +95,3 @@ const pet = () => {
   
   // nextBtn.addEventListener('click', ()=>{moveNext()})
   // prevBtn.addEventListener('click', ()=>{movePrev()})
-
