@@ -13,7 +13,7 @@ const showHideIcons = () => {
 };
 arrowIcons.forEach((icon) => {
   icon.addEventListener("click", () => {
-    let firstImgWidth = firstImg.clientWidth + 14;
+    let firstImgWidth = firstImg.clientWidth;
     carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
     setTimeout(() => showHideIcons(), 60);
   });
@@ -22,14 +22,14 @@ arrowIcons.forEach((icon) => {
 const autoSlide = () =>{
     if(carousel.scrollLeft == (carousel.scrollWidth - carousel.clientWidth)) return;
     positionDiff = Math.abs(positionDiff);
-    let firstImgWidth = firstImg.clientWidth + 14;
+    let firstImgWidth = firstImg.clientWidth;
     let valDifference = firstImgWidth - positionDiff;
 
     if(carousel.scrollLeft > prevScrollLeft){
-        return carousel.scrollLeft += positionDiff > firstImgWidth / 10 ? valDifference : -positionDiff;
+        return carousel.scrollLeft += positionDiff > firstImgWidth / 8 ? valDifference : -positionDiff;
     } 
 
-    carousel.scrollLeft -= positionDiff > firstImgWidth / 10 ? valDifference : -positionDiff;
+    carousel.scrollLeft -= positionDiff > firstImgWidth / 8 ? valDifference : -positionDiff;
 }
 
 const dragStart = (e) => {
