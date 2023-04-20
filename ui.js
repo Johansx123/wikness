@@ -1,5 +1,5 @@
-
- let root = document.getElementById("carousel"),
+import "./slider"
+let root = document.getElementById("carousel"),
  
  base = [];
 // img.src = "images/nuestros jobs.jpg"

@@ -70,4 +70,3 @@ const widthImg = () =>{
 widthImg()
 wrapper.clientWidth = 20
 
-
