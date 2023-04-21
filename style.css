@@ -297,7 +297,7 @@ overflow: hidden;
 display: grid;
 grid-auto-columns:calc(100% / 4);
 grid-template-rows: 220px;
-padding: 5% 0 ;
+padding: 5% 1px ;
 scroll-behavior: smooth;
 }
 .carousel.dragging{
@@ -309,7 +309,6 @@ scroll-behavior: smooth;
 }
 .carousel .item-slider{
   display: flex;
-  object-fit: cover;
   justify-content: center;
   overflow: hidden;
   margin-left: 14px;
@@ -319,9 +318,10 @@ scroll-behavior: smooth;
   border-radius: 0.5em;
   box-shadow: 0 0 0.2em rgba(0, 0, 0, 0.671);
 }
-.carousel .item-slider img{
-  width: 100%;
+.carousel .item-slider>img{
+  object-fit: cover;
 }
+
 .carousel .item-slider:first-child{
   margin-left: 0;
 }
