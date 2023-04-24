@@ -83,9 +83,9 @@ main {
   background-color: var(--blue);
   color: var(--whidt);
   border-color: var(--blue);
-  align-self: baseline;
   margin-top: 26px;
   transition: 0.2s;
+  
 }
 .solid-blue:hover {
   background-color: #1119b8;
@@ -113,7 +113,6 @@ body .header-box {
   position: fixed;
   box-shadow: 0px 0px 3px 1px var(--gray);
   z-index: var(--z-fixed);
-
 }
 .wrapper {
   height: 100%;
@@ -145,6 +144,20 @@ body .header-box {
   transition: background-color 0.2s;
   background-color: #a4a4a43a;
 }
+@media screen and (max-width: 950px) {
+  .pages-box{
+    display: none;
+  }
+  .box-header-content>.wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100VW;
+    height: 100VH;
+    background-color: var(--celeste-black);
+    
+  }
+}
 /*Banner*/
 
 .banner {
@@ -169,15 +182,32 @@ body .header-box {
 }
 .content-banner:first-child p {
   width: 80%;
-  align-self: flex-start;
 }
 .content-banner > .button {
   font-size: 1.5rem;
+  align-self: baseline;
 }
 
 .content-banner img {
   /* Titulo con linear como imagen*/
   width: 600px;
+}
+
+@media screen and (max-width : 1150px) {
+  .banner{
+    padding-left: 0;
+  }
+
+
+  .content-banner {
+    text-align: center;
+    margin: auto;
+    align-items: center;
+    width: 80%;
+  }
+  .content-banner > .button {
+    align-self: center;
+  }
 }
 
 /* Servicios */
