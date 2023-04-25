@@ -36,8 +36,6 @@ let nav = document.querySelector('#nav')
 let openMenu = document.getElementById('openMenu')
 let closeMenu = document.getElementById('closeMenu')
 
-
-
 openMenu.addEventListener('click', () => { 
   nav.classList.remove('state') 
   document.body.style.overflow = "hidden"
