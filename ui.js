@@ -7,18 +7,17 @@ const render = (data) => {
     info = document.createElement("div"),
     title = document.createElement("h3"),
     paragraf = document.createElement("p");
-
-  root.appendChild(card);
-  card.className = "item-slider";
-  card.appendChild(info);
-  card.appendChild(img);
-  info.appendChild(title);
-  info.appendChild(paragraf);
-  img.src = data.img;
-  title.innerText = data.title;
-  paragraf.innerHTML = data.info;
-  console.log(data);
-  info.className = "info-jobs";
+    root.appendChild(card);
+    card.className = "item-slider";
+    card.appendChild(info);
+    card.appendChild(img);
+    info.appendChild(title);
+    info.appendChild(paragraf);
+    img.src = data.img;
+    title.innerText = data.title;
+    paragraf.innerHTML = data.info;
+    console.log(data);
+    info.className = "info-jobs";
 };
 
 const pet = () => {
@@ -29,3 +28,13 @@ const pet = () => {
       data.map((x) => render(x));
     });
 };
+
+
+// Menu de navegacion desplegable
+
+let nav = document.querySelector('#nav')
+let openMenu = document.getElementById('openMenu')
+let closeMenu = document.getElementById('closeMenu')
+
+openMenu.addEventListener('click', ()=>{nav.classList.remove('state')})
+closeMenu.addEventListener('click', ()=>{nav.classList.add('state')})
