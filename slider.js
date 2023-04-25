@@ -1,12 +1,21 @@
 
-  const carousel = document.querySelector(".carousel"), firstImg = carousel.querySelectorAll(".item-slider")[0], images = carousel.getElementsByClassName("item-slider"), arrowIcons = document.querySelectorAll(".wrapper-slider i"), wrapper = document.getElementById("wrapper-slider");
+
+
+
+
+
+function slider(carouselElement, itemFrist, items, iconsArrow, wrapperElement, margin = 0) {
+  const carousel = document.querySelector(carouselElement), 
+  firstImg = carousel.querySelectorAll(itemFrist)[0], 
+  images = carousel.getElementsByClassName(items), 
+  arrowIcons = document.querySelectorAll(iconsArrow), 
+  wrapper = document.getElementById(wrapperElement);
 
   let isDragStart = false, isDragging = false, prevPageX, prevScrollLeft, positionDiff, widthWrapper;
   const showHideIcons = () => {
-    let scrollWidth = carousel.scrollWidth - carousel.clientWidth;
+    let scrollWidth = carousel.scrollWidth - carousel.clientWidthv;
     arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block";
-    arrowIcons[1].style.display =
-      carousel.scrollLeft == scrollWidth ? "none" : "block";
+    arrowIcons[1].style.display =  carousel.scrollLeft == scrollWidth ? "none" : "block";
   };
   arrowIcons.forEach((icon) => {
     icon.addEventListener("click", () => {
@@ -68,5 +77,6 @@
   };
   widthImg();
   wrapper.clientWidth = 20;
-
-
+}
+slider(".carousel",".item-slider","item-slider", ".wrapper-slider i", "wrapper-slider") 
+slider(".servicios",".servicios-item","servicios-item", ".wrapper-servicios i", "wrapper-servicios", 20) 
