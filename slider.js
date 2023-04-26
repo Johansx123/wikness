@@ -4,9 +4,9 @@
 
 
 
-function slider(carouselElement, itemFrist, items, iconsArrow, wrapperElement, margin = 0) {
+function slider(carouselElement, itemFirst, items, iconsArrow, wrapperElement, margin = 0) {
   const carousel = document.querySelector(carouselElement), 
-  firstImg = carousel.querySelectorAll(itemFrist)[0], 
+  firstImg = carousel.querySelectorAll(itemFirst)[0],
   images = carousel.getElementsByClassName(items), 
   arrowIcons = document.querySelectorAll(iconsArrow), 
   wrapper = document.getElementById(wrapperElement);
@@ -30,14 +30,14 @@ function slider(carouselElement, itemFrist, items, iconsArrow, wrapperElement, m
     if (carousel.scrollLeft == (carousel.scrollWidth - carousel.clientWidth))
       return;
     positionDiff = Math.abs(positionDiff);
-    let firstImgWidth = firstImg.clientWidth;
+    let firstImgWidth = firstImg.clientWidth + margin;
     let valDifference = firstImgWidth - positionDiff;
 
     if (carousel.scrollLeft > prevScrollLeft) {
-      return carousel.scrollLeft += positionDiff > firstImgWidth / 8 ? valDifference : -positionDiff;
+      return carousel.scrollLeft += positionDiff > firstImgWidth / 8 ? valDifference : - positionDiff;
     }
 
-    carousel.scrollLeft -= positionDiff > firstImgWidth / 8 ? valDifference : -positionDiff;
+    carousel.scrollLeft -= positionDiff > firstImgWidth / 8 ? valDifference :  - positionDiff;
   };
 
   const dragStart = (e) => {

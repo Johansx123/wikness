@@ -351,11 +351,10 @@ body .header-box {
     max-width: 270px;
     position: relative;
     margin: auto;
-    
-    
   }
   
   .wrapper-servicios i {
+    display: block;
     top: 50%;
     cursor: pointer;
     position: absolute;
@@ -374,13 +373,20 @@ body .header-box {
     overflow: hidden;
     display: grid;
     scroll-behavior: smooth;
-    grid-template-rows: 340px;
     grid-template-columns: repeat(3, calc(100%)) ;
     padding: 5% 5px;
     gap: 14PX;
     justify-content: normal;
+    align-items: center;
+  }
+  .servicios.dragging {
+    cursor: grab;
+    scroll-behavior: auto;
   }
   
+  .servicios.dragging a {
+    pointer-events: none;
+  }
   
 
 }
@@ -492,7 +498,6 @@ body .header-box {
   display: flex;
   justify-content: center;
   overflow: hidden;
-  /* margin-left: 14px; */
   grid-row-start: 1;
   grid-row-end: 2;
   position: relative;
@@ -510,13 +515,13 @@ body .header-box {
 
 @media screen and (max-width: 1200px) {
   .wrapper-slider .carousel {
-    grid-auto-columns: calc(100% / 3);
+    grid-auto-columns: calc(100% / 3 - 12px);
   }
 }
 
 @media screen and (max-width: 900px) {
   .wrapper-slider .carousel {
-    grid-auto-columns: calc(100%/2);
+    grid-auto-columns: calc(100% / 2 - 12px);
   }
 }
 
