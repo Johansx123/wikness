@@ -35,12 +35,19 @@ const pet = () => {
 let nav = document.querySelector('#nav')
 let openMenu = document.getElementById('openMenu')
 let closeMenu = document.getElementById('closeMenu')
+const icon = document.getElementById('icon')
 
 openMenu.addEventListener('click', () => { 
   nav.classList.remove('state') 
   document.body.style.overflow = "hidden"
+  openMenu.style.transform = "translateX(-100vw)"
+  openMenu.style.transition  = "transform 1s"
+  icon.style.transform = "translateX(-100vw)"
+  icon.style.transition  = "transform 1s"
 })
 closeMenu.addEventListener('click', () => { 
   nav.classList.add('state') 
   document.body.style.overflow = ""
+  openMenu.style.transform = "translateX(0)"
+  icon.style.transform = "translateX(0)"
 })
