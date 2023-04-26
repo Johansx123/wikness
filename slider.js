@@ -13,13 +13,14 @@ function slider(carouselElement, itemFrist, items, iconsArrow, wrapperElement, m
 
   let isDragStart = false, isDragging = false, prevPageX, prevScrollLeft, positionDiff, widthWrapper;
   const showHideIcons = () => {
-    let scrollWidth = carousel.scrollWidth - carousel.clientWidthv;
+    let scrollWidth = carousel.scrollWidth - carousel.clientWidth;
     arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block";
+    
     arrowIcons[1].style.display =  carousel.scrollLeft == scrollWidth ? "none" : "block";
   };
   arrowIcons.forEach((icon) => {
     icon.addEventListener("click", () => {
-      let firstImgWidth = firstImg.clientWidth;
+      let firstImgWidth = firstImg.clientWidth + margin;
       carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
       setTimeout(() => showHideIcons(), 60);
     });
@@ -78,5 +79,5 @@ function slider(carouselElement, itemFrist, items, iconsArrow, wrapperElement, m
   widthImg();
   wrapper.clientWidth = 20;
 }
-slider(".carousel",".item-slider","item-slider", ".wrapper-slider i", "wrapper-slider") 
-slider(".servicios",".servicios-item","servicios-item", ".wrapper-servicios i", "wrapper-servicios") 
+slider(".carousel",".item-slider","item-slider", ".wrapper-slider i", "wrapper-slider", 14) 
+slider(".servicios",".servicios-item","servicios-item", ".wrapper-servicios i", "wrapper-servicios", 14) 
