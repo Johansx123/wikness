@@ -482,6 +482,7 @@ body .header-box {
   grid-template-rows: 220px;
   padding: 5% 1px;
   scroll-behavior: smooth;
+  transition: scroll 2s;
 }
 
 .carousel.dragging {

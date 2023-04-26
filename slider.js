@@ -79,4 +79,4 @@ function slider(carouselElement, itemFrist, items, iconsArrow, wrapperElement, m
   wrapper.clientWidth = 20;
 }
 slider(".carousel",".item-slider","item-slider", ".wrapper-slider i", "wrapper-slider") 
-slider(".servicios",".servicios-item","servicios-item", ".wrapper-servicios i", "wrapper-servicios", 20) 
+slider(".servicios",".servicios-item","servicios-item", ".wrapper-servicios i", "wrapper-servicios") 
