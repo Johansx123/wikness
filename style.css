@@ -41,11 +41,6 @@
   padding: 0;
   text-decoration: none;
 }
-
-html {
-  width: 100vw;
-}
-
 main {
   background-color: var(--white);
 }
@@ -180,9 +175,6 @@ body .header-box {
 }
 
 @media screen and (max-width: 950px) {
-  /* .pages-box{
-    display: none;
-  } */
   .openMenu {
     display: inline;
   }
@@ -243,14 +235,13 @@ body .header-box {
 }
 
 /*Banner*/
-
 .banner {
   width: 100%;
   height: 700px;
   background-image: url(./images/Banner.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 130rem;
+  background-size: cover;
   padding-top: 100px;
   padding-left: var(--margin-body);
 }
@@ -300,7 +291,13 @@ body .header-box {
     width: 80%;
   }
 }
-
+@media screen and (max-width: 450px) {
+  .banner{
+    height: 100vh;
+    background-position-x: 60%;
+    
+  }
+}
 /* Servicios */
 
 .wrapper-services {
@@ -349,7 +346,7 @@ body .header-box {
 }
 
 @media screen and (max-width: 800px) {
-  .wrapper-services .wrapper-title {
+  .wrapper-services .wrapper-title, .wrapper-jobs .wrapper-title {
     display: flex;
     width: 100%;
   }
@@ -447,7 +444,6 @@ body .header-box {
   align-items: center;
   justify-content: center;
   margin: 7% auto;
-  padding: 0 35px;
 }
 
 .wrapper-jobs a {
