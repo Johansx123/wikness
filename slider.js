@@ -49,6 +49,7 @@ function slider(carouselElement, itemFirst, items, iconsArrow, wrapperElement, m
     if (!isDragStart)
       return;
     e.preventDefault();
+    console.log()
     isDragging = true;
     carousel.classList.add("dragging");
     positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
@@ -79,5 +80,8 @@ function slider(carouselElement, itemFirst, items, iconsArrow, wrapperElement, m
   widthImg();
   wrapper.clientWidth = 20;
 }
-slider(".carousel",".item-slider","item-slider", ".wrapper-slider i", "wrapper-slider", 14) 
+slider(".carousel",".item-slider","item-slider", ".wrapper-slider i", "wrapper-slider", 14);
 slider(".servicios",".servicios-item","servicios-item", ".wrapper-servicios i", "wrapper-servicios", 14) 
+
+
+
